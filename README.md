@@ -30,6 +30,7 @@
 - section3/1-organize-with-subdirectory
 - section3/2-managing-header-files
 - section3/3-managing-header-files
+
   ```bash
   cd build
   cmake ..
@@ -37,10 +38,9 @@
   ./calculator
   ```
 
-- section4/1-set-variables
-- section4/2-manipulating-variables
-- section4/3-operating-variables
+- section4
+- section5
   ```bash
   cmake -P CMakeLists.txt
   ```
-
+  (-P : process as script mode)
