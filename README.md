@@ -40,7 +40,16 @@
 
 - section4
 - section5
+
   ```bash
   cmake -P CMakeLists.txt
   ```
+
   (-P : process as script mode)
+
+- section7
+  ```bash
+  mkdir build && cd build
+  cmake ..
+  sudo make install
+  ```
