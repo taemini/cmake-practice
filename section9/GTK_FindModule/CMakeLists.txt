@@ -1,11 +1,15 @@
 cmake_minimum_required(VERSION 3.0.0)
 
-project(GTK_PC)
+project(GTK_FindModule)
 
-find_package(PkgConfig REQUIRED)  # find & execute FindPkgConfig.cmake
-                                  # (from CMake default modules folder : /usr/share/cmake/modules)
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules)
+find_package(GTK3 REQUIRED)
 
-pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
+include_directories(${GTK3_INCLUDE_DIRS})
+link_directories(${GTK3_LIBRARY_DIRS})
+
+message("GTK_CFLAGS_OTHER" ${GTK_CFLAGS_OTHER})
+add_definitions(${GTK_CFLAGS_OTHER})
 
 add_executable(${PROJECT_NAME}_app main.cpp)
 
